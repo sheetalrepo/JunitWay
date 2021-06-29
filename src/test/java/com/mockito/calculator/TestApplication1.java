@@ -1,9 +1,8 @@
 package com.mockito.calculator;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.Assert;
 import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
 
 /**
  * Mocking w/o any annotation
@@ -13,12 +12,12 @@ import static org.mockito.Mockito.*;
  */
 public class TestApplication1 {
 
-	Application application = null;
+	static Application application = null;
 	
-	CalculatorCloudService service = mock(CalculatorCloudService.class);
+	static CalculatorCloudService service = mock(CalculatorCloudService.class);
 	
-	@Before
-	public void setUp() {
+	@BeforeAll
+	public static void setUp() {
 		application = new Application(service);
 	}
 	
@@ -29,7 +28,7 @@ public class TestApplication1 {
 		when(service.add(10, 20)).thenReturn((double) 30);
 		
 		//Testing my application method
-		Assert.assertEquals(130, application.overAndAboveCentury(10, 20), 0);
+		Assertions.assertEquals(130, application.overAndAboveCentury(10, 20));
 		
 		// verify whether we used service in our method or not
 		verify(service).add(10, 20);
