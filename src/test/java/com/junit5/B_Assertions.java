@@ -1,10 +1,18 @@
 package com.junit5;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Assertions;
+
+//import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class B_Assertions {
+
+	@Test
+	void testAssertNull() {
+		String str1 = null;
+		String str2 = "xyz";
+		Assertions.assertNotNull(str2);
+	}
 
 	@Test
 	void testAssertEqual() {
@@ -20,17 +28,9 @@ public class B_Assertions {
 	}
 
 	@Test
-	void testAssertNull() {
-		String str1 = null;
-		String str2 = "xyz";
-		Assertions.assertNull(str1);
-		Assertions.assertNotNull(str2);
-	}
-
-	@Test
 	void testAssertAll() {
 		String home = "Hno10";
-		String street = "Park Street";
+		String street = "Garden Street";
 		String city = "Pune";
 
 		assertAll("Checking complete address as a whole", 

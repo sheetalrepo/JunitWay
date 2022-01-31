@@ -8,7 +8,9 @@ public class E_Exceptions {
 	void testExpectedException() {
 
 		Assertions.assertThrows(NumberFormatException.class, () -> {
-			Integer.parseInt("Five"); //throw NFE
+			
+			Integer.parseInt("abc"); //throw NFE
+			
 		});
 	}
 
@@ -16,10 +18,15 @@ public class E_Exceptions {
 	void testExpectedExceptionWithSuperType() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			Integer.parseInt("Five"); // NFE extends IAE 
+			
+			Integer.parseInt("abc"); // NFE extends IAE 
+			
+			
 		});
 	}
 
+	
+	
 	@Test
 	@DisplayName("Should Fail")
 	void testExpectedExceptionFail() {
@@ -28,6 +35,9 @@ public class E_Exceptions {
 			Integer.parseInt("1"); // No exception will be thrown, but we expect an exception
 		});
 	}
+	
+	
+	
 	
 	@Test
 	@DisplayName("Should Fail")

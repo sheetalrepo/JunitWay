@@ -10,9 +10,9 @@ import org.junit.jupiter.params.converter.JavaTimeConversionPattern;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class J_ParamConversion {
-
+	
 	// Explicit Convertion
-	@ParameterizedTest
+	//@ParameterizedTest
 	@ValueSource(strings = { "02.01.2021", "31.12.2021" })
 	void testWithExplicitJavaTimeConverter(@JavaTimeConversionPattern("dd.MM.yyyy") LocalDate argument) {
 		System.out.println("date: "+argument);
@@ -20,7 +20,7 @@ public class J_ParamConversion {
 	}
 
 	// Implicit Convertion
-	@ParameterizedTest
+	//@ParameterizedTest
 	@ValueSource(strings = "SECONDS")
 	void testWithImplicitArgumentConversion(ChronoUnit argument) {
 		System.out.println("Sec: "+argument);

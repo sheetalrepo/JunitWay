@@ -5,7 +5,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
-@TestInstance(Lifecycle.PER_CLASS)
+/**
+ * PER_CLASS : instance will be shared among all methods (TC failed) 
+ * PER_METHOD : instance will not be shared and cases will be passed
+ * 
+ * @author Sheetal_Singh
+ *
+ */
+//@TestInstance(Lifecycle.PER_CLASS)
+@TestInstance(Lifecycle.PER_METHOD)
 public class I_LifeCyclePerClassInstance {
 
 	//shared among all methods

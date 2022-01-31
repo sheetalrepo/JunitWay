@@ -5,12 +5,11 @@ import org.junit.jupiter.api.*;
 public class F_Repeat {
 
 	
-	@DisplayName("LongName")
+	@DisplayName("ABC")
 	@RepeatedTest(value = 5, name = RepeatedTest.LONG_DISPLAY_NAME)
 	void testLongName(TestInfo testInfo) {
 		System.out.println("Apple");
 	}
-	
 	
 	@DisplayName("ShortName")
 	@RepeatedTest(value = 5, name = RepeatedTest.SHORT_DISPLAY_NAME)

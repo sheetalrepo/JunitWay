@@ -6,32 +6,30 @@ import org.junit.jupiter.api.*;
 public class G_TestPlanTagsTest {
 
 	@Test
-	@Tag("prod")
 	@Tag("dev")
 	@Tag("qa")
 	void testOne(TestInfo testInfo) { 
-		System.out.println("Prod Dev QA Case");
+		System.out.println("-----------> Dev QA Case");
 	}
 
 
 	@Test
 	@Tag("prod")
 	void testTwo(TestInfo testInfo) { 
-		System.out.println("Prod Only Case");
+		System.out.println("-----------> Prod Only Case");
 	}
 
 	
 	@Test
 	@Tag("dev")
 	void testThree(TestInfo testInfo) { 
-		System.out.println("Dev Only Case");
+		System.out.println("-----------> Dev Only Case");
 	}
 	
 	@Test
 	@Tag("qa")
 	void testFour(TestInfo testInfo) { 
-		System.out.println("=========================>>>>>>>>>>>>>>>>>>>>>");
-		System.out.println("QA Only Case");
+		System.out.println("-----------> QA Only Case");
 	}
 	
 }

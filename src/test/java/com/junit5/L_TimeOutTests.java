@@ -8,24 +8,18 @@ import org.junit.jupiter.api.Timeout;
 
 public class L_TimeOutTests {
 
-	
-	@BeforeEach
-    @Timeout(2)
-    void setUp() {
-        // fails if execution time exceeds 5 seconds
-    }
-
 	@Test
-    void testBeforeEachTimeout() throws InterruptedException {
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void test1() throws InterruptedException {
     	Thread.sleep(5000);
-    	System.out.println("Fail if timeout exceeds");	
+    	System.out.println("Fail if timeout exceeds 1");	
     }
 	
     @Test
     @Timeout(value = 10, unit = TimeUnit.SECONDS)
-    void testTimeout() throws InterruptedException {
+    void test2() throws InterruptedException {
     	Thread.sleep(5000);
-    	System.out.println("Fail if timeout exceeds");	
+    	System.out.println("Fail if timeout exceeds 2");	
     }
     
     

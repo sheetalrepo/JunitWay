@@ -7,8 +7,10 @@ import org.junit.jupiter.api.Assumptions;
 
 
 /**
- * Assumption: Test executes only if assumptions are true Test will skip in case
- * assumptions fails Overall Build will pass in case assumptions fails
+ * Assumption: 
+ * 1. Test executes only if assumptions are true 
+ * 2. Test will skip in case assumptions fails 
+ * 3. Overall Build will pass in case assumptions fails
  * 
  * @author Sheetal_Singh
  */
@@ -16,16 +18,17 @@ public class C_Assumption {
 
 	@Test
 	void testAssumeTrue() {
-		boolean b = true;
+		//code
+		boolean b = false;
 		Assumptions.assumeTrue(b);
 		System.out.println("Print only if above assuption is True");
 	}
 
 	@Test
-	@DisplayName("DisplayName: Test executes only on Saturday")
-	public void testAssumeTrueSaturday() {
+	@DisplayName("DisplayName: Test executes only on Sunday")
+	public void testAssumeTrueSunday() {
 		LocalDateTime dt = LocalDateTime.now();
-		Assumptions.assumeTrue(dt.getDayOfWeek().getValue() == 6);
+		Assumptions.assumeTrue(dt.getDayOfWeek().getValue() == 1);
 		System.out.println("Weekend Fun!!!");
 	}
 

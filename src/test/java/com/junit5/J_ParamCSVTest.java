@@ -25,9 +25,9 @@ public class J_ParamCSVTest {
 
 	
 	
-	
+
 	//@ParameterizedTest
-	@CsvFileSource(resources = "/com/junit5/csvsource.csv", numLinesToSkip = 1)
+	//@CsvFileSource(resources = "/com/junit5/csvsource.csv", numLinesToSkip = 1)
 	void testWithCsvFileSource(String country, int reference) {
 		System.out.println(country+ ": "+ reference);
 	    Assertions.assertNotNull(country);
@@ -37,7 +37,6 @@ public class J_ParamCSVTest {
 	
 	
 	@DisplayName("Price Chart")
-	@ParameterizedTest
 	//@ParameterizedTest(name = "{index} ==> The Price of ''{0}'' is {1}")
 	@CsvSource({
 	    "apple, 100",

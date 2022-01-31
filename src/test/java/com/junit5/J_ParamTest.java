@@ -14,15 +14,16 @@ import org.junit.jupiter.api.Test;
 
 public class J_ParamTest {
 
-	@ParameterizedTest
+	//@ParameterizedTest
 	@ValueSource(strings = { "Thanos", "Spidy", "Thor" })
-	void palindromes(String word) {
+	void testStringsStream(String word) {
 	  System.out.print(word+", ");
+	  //code
 	}
 	
 	
-	/*		
-	@ParameterizedTest
+			
+	//@ParameterizedTest
 	@ValueSource(ints = { 1, 2, 3 })
 	void testWithValueSource(int argument) {
 		System.out.print("Ints: "+argument);
@@ -31,7 +32,7 @@ public class J_ParamTest {
 	}
 	
 	
-	@ParameterizedTest
+	//@ParameterizedTest
 	@NullSource
 	@EmptySource
 	@ValueSource(strings = { " ", "   ", "\t", "\n" })
@@ -45,12 +46,12 @@ public class J_ParamTest {
 	@NullAndEmptySource
 	@ValueSource(strings = { " ", "   ", "\t", "\n" })
 	void nullEmptyAndBlankStringsN(String text) {
-		System.out.println("{"+text+"}");
+		System.out.println(">"+text+"<");
 	    assertTrue(text == null || text.trim().isEmpty());
 	}
 	
 	
 	
-	*/
+	
 	
 }
